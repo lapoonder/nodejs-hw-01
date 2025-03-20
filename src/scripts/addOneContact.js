@@ -1,4 +1,4 @@
-import { getAllContacts } from './getAllContacts.js';
+import { readContacts } from '../utils/readContacts.js';
 import { createFakeContact } from '../utils/createFakeContact.js';
 import { writeContacts } from '../utils/writeContacts.js';
 
@@ -6,7 +6,7 @@ let contactsList;
 
 export const addOneContact = async () => {
   try {
-    contactsList = await getAllContacts();
+    contactsList = await readContacts();
   } catch (error) {
     console.log('Ошибка:', error);
   }
